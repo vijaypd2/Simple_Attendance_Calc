@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="'en'" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Attendance Calc</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <h1>Attendance Calculator</h1>
+  <div class="activity">
+
+  <form>
+    Current Percentage:<br>
+    <input type="text" id="percent" value=""><br><br>
+    Current No. of hours present:<br>
+    <input type="text" id="phour" value=""><br><br>
+    <button type="button" onclick="myFunction()">Submit</button>
+  </form>
+  </div>
+
+  <script>
+    function myFunction(){
+    var percent,hours,total,target;
+    percent= document.getElementById("percent").value;
+    hours= document.getElementById("phour").value;
+    total=(hours*100)/percent;
+    target=(hours-(.75*total))/(-.25);
+    target=Math.round(target);
+    alert("You Have to enter "+target+" more hours.");
+
+
+
+  }
+  </script>
+
+
+
+</body>
+
+</html>
